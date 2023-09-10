@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <header>
+      <h2>Personal Data</h2>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="data">
+          <p data-testid="slackUserName">
+            Slack Name: <span>Akintunde Qudus</span>
+          </p>
+        </div>
+
+        <div class="data">
+          <p data-testid="slackDisplayImage">
+            Slack Display Picture:
+            <img
+              src="WhatsApp Image 2023-09-09 at 8.10.29 PM.jpeg"
+              alt="AkintundeQudus"
+              class="img"
+            />
+          </p>
+        </div>
+
+        <div class="data">
+          <p data-testid="currentDayOfTheWeek">
+            Current Day of the Week: <span class="currentDay"></span>
+          </p>
+        </div>
+
+        <div class="data">
+          <p data-testid="currentUTCTime">
+            Current UTC Time: <span class="currentTime"></span>
+          </p>
+        </div>
+
+        <div class="data">
+          <p data-testid="myTrack">Track: <span>Frontend Track</span></p>
+        </div>
+
+        <div class="data">
+          <p data-testid="githubURL">
+            GitHub URL:
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/Adeola18?tab=repositories"
+                >GitHub Repository</a
+              ></span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+      console.log("Hello World!");
+
+      const dayEl = document.querySelector(".currentDay");
+      const timeEl = document.querySelector(".currentTime");
+
+      const currentDay = new Date().getDay(); // this returns a number
+      console.log(currentDay);
+
+      // Array of days
+      const days = [
+        "Sunday",
+        "Monday",
+        "Teusday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      // displaying the day
+      dayEl.textContent = days[`${currentDay}`];
+
+      const currentTime = new Date().getTime();
+      console.log(currentTime);
+
+      timeEl.textContent = currentTime;
+    </script>
+  </body>
+</html>
